@@ -7,3 +7,7 @@ export interface userEntity {
     email:string,
     password:string
 }
+
+export interface deleteUser {
+    _id:ObjectId
+}
