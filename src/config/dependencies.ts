@@ -3,6 +3,6 @@ import * as usecases from '../application/useCases/index'
 import { IDependencies } from "../application/interfaces/IDependencies";
 
 export const dependencies: IDependencies = {
+    repositories,
     usecases,
-    repositories
 }

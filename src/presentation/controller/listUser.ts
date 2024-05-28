@@ -8,9 +8,10 @@ export const listUserContoller = (dependencies:IDependencies) => {
     return async (req:Request ,res:Response) => {
         const {usecases:{listUsers}} = dependencies;
         try {
-            const users:userEntity |null = await listUsers(dependencies).execute()
+            const users:userEntity[] | null = await listUsers(dependencies).execute();
             res.status(200).json(users)
         } catch (error:any) {
+            console.log(error)
             throw new Error(error)
         }
     }

@@ -2,14 +2,14 @@ import { IDependencies } from "../interfaces/IDependencies"
 
 
 
-export const listUsers = async (dependencies:IDependencies) => {
-    const {repositories:{listUsers}} = dependencies
+export const listUsers = (dependencies: IDependencies) => {
+    const { repositories: { listUsers } } = dependencies
     return {
-        execute:async () => {
+        execute: async() => {
             try {
                 return await listUsers()
-            } catch (error:any) {
-                throw new Error(error)   
+            } catch (error: any) {
+                throw new Error(error)
             }
         }
     }
